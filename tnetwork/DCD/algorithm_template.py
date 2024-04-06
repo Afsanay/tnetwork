@@ -16,7 +16,7 @@ def DCD_algorithm(dynamic_network,algorithm_name,detection,label_attribution=Non
     if post_processing!=None:
         dynamic_partition = post_processing(dynamic_partition)
     after_postprocess = time.time()
-
+    dynamic_communities = None
     if label_attribution!=None:
         print("Label Attribution")
         dynamic_communities = label_attribution(dynamic_partition)
