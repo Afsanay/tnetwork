@@ -18,6 +18,7 @@ def DCD_algorithm(dynamic_network,algorithm_name,detection,label_attribution=Non
     after_postprocess = time.time()
 
     if label_attribution!=None:
+        print("Label Attribution")
         dynamic_communities = label_attribution(dynamic_partition)
         time_Steps["match"] = time.time() - after_postprocess
         time_Steps["total"] += time_Steps["match"]
